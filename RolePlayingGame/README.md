@@ -56,3 +56,8 @@ jag har intefunnit något hinder.
 att göra en karaktär. Jag har stött på ett problem jag måste åtgärda. Mina JButtons
 läggs längs med efter varandra och jag vill ha de "radbrutna". Nästa gång ska jag
 åtgärda det problemet och påbärja min andra klasser.
+
+-2014-10-24 Idag har jag lyckats dirigera knapparna till önskande ställen. Jag har
+lagt till en konsoll som kommer säga vad som händer när programmet körs. Jag är
+färdig med strukturen på GUI:et, det ändå som återstår är att lägga till de övriga
+klasserna.

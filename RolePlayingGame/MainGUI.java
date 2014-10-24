@@ -14,7 +14,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextField;
+import javax.swing.JTextArea;
 
 public class MainGUI extends JFrame{
     /**
@@ -27,7 +27,7 @@ public class MainGUI extends JFrame{
     private JMenuItem terminate;
     private JLabel lblCreateCharacter, lblFinalCharacter;
     private JButton btnConfirm, btnHuman, btnElf, btnWarrior, btnArcher;
-    private JTextField name;
+    private JTextArea txaName, txaConsole;
     private JPanel pCreateCharacter, pPlayGame;
     private JTabbedPane jtp;
    
@@ -39,7 +39,7 @@ public class MainGUI extends JFrame{
          * fönstrets storlek
          */
         this.dimFrame = new Dimension(700, 700);
-        this.dimButton = new Dimension(100, 50);
+        this.dimButton = new Dimension(350,700);
         this.dimTxf = new Dimension(70, 50);
         this.initGIU();
         this.setSize(dimFrame);
@@ -83,33 +83,43 @@ public class MainGUI extends JFrame{
         this.jtp.addTab("Create Character", pCreateCharacter);
         this.jtp.addTab("Play Game", pPlayGame);
         /**
+         * Play game - output file
+         * logfile
+         */
+        this.txaConsole = new JTextArea((int)dimButton.getWidth(), (int)dimButton.getHeight());
+        
+        this.pPlayGame.add(txaConsole);
+        /**
          * Character - functions
          * buttons
          */
-        
         this.btnElf = new JButton("Elf");
-        this.btnElf.setPreferredSize(dimButton);     
         this.btnElf.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){
+                pCreateCharacter.remove(btnElf);
+                pCreateCharacter.remove(btnHuman);
+                pCreateCharacter.add(btnWarrior);
+                pCreateCharacter.add(btnArcher);
             }
         });               
         this.btnHuman = new JButton("Human");
-        this.btnHuman.setPreferredSize(dimButton);
-        this.btnElf.addActionListener( new ActionListener(){
+        this.btnHuman.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){
+                pCreateCharacter.remove(btnElf);
+                pCreateCharacter.remove(btnHuman);
+                pCreateCharacter.add(btnWarrior);
+                pCreateCharacter.add(btnArcher);
             }
         });
         this.btnWarrior = new JButton("Warrior");
-        this.btnWarrior.setPreferredSize(dimButton);            
         this.btnWarrior.addActionListener( new ActionListener(){
             @Override
-            public void actionPerformed( ActionEvent e ){
+            public void actionPerformed( ActionEvent e ){          
             }
         });
-        this.btnArcher = new JButton("Archer");
-        this.btnArcher.setPreferredSize(dimButton);            
+        this.btnArcher = new JButton("Archer");           
         this.btnArcher.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){
@@ -117,11 +127,14 @@ public class MainGUI extends JFrame{
         });
         this.lblCreateCharacter = new JLabel("Create Character");
         
+        this.pCreateCharacter.setLayout(null);
         this.pCreateCharacter.add(lblCreateCharacter);
-        this.pCreateCharacter.add(btnElf, BorderLayout.NORTH);
-        this.pCreateCharacter.add(btnHuman, BorderLayout.CENTER);
-        this.pCreateCharacter.add(btnWarrior, BorderLayout.SOUTH);
-        this.pCreateCharacter.add(btnArcher);
+        this.btnElf.setBounds(0, 0, (int)dimButton.getWidth(), (int)dimButton.getHeight());
+        this.pCreateCharacter.add(btnElf);
+        this.btnHuman.setBounds(350, 0, (int)dimButton.getWidth(), (int)dimButton.getHeight());
+        this.pCreateCharacter.add(btnHuman);
+        this.btnWarrior.setBounds(0, 0, (int)dimButton.getWidth(), (int)dimButton.getHeight());
+        this.btnArcher.setBounds(350, 0, (int)dimButton.getWidth(), (int)dimButton.getHeight());
         /**
          * Play Game - functions
          */
