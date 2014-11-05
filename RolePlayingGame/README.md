@@ -61,3 +61,9 @@ läggs längs med efter varandra och jag vill ha de "radbrutna". Nästa gång sk
 lagt till en konsoll som kommer säga vad som händer när programmet körs. Jag är
 färdig med strukturen på GUI:et, det ändå som återstår är att lägga till de övriga
 klasserna.
+
+-2014-11-05 Idag har jag lagt till en Boss klass och skapat en attack knapp och
+metod som ärver från playern, jag skapade en player som är en elf/human, och elf
+/human ärver i sin tur från abstractklasssen. Jag har då problem med att det inte
+går att ärva från player. Sen har jag haft problem med att veta vilken ras jag har
+valt så nästa lektion är det problemen som jag ska åtgärda.

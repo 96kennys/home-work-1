@@ -1,9 +1,6 @@
 package RolePlayingGame;
 
-
-import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -26,10 +23,12 @@ public class MainGUI extends JFrame{
     private JMenu archive;
     private JMenuItem terminate;
     private JLabel lblCreateCharacter, lblFinalCharacter;
-    private JButton btnConfirm, btnHuman, btnElf, btnWarrior, btnArcher;
+    private JButton btnConfirm, btnHuman, btnElf, btnWarrior, btnArcher, btnAttack;
     private JTextArea txaName, txaConsole;
     private JPanel pCreateCharacter, pPlayGame;
     private JTabbedPane jtp;
+    private Boss boss;
+    private Abstractclass player;
    
     /**
      * Modellvariabler
@@ -38,11 +37,16 @@ public class MainGUI extends JFrame{
         /**
          * fönstrets storlek
          */
+        
         this.dimFrame = new Dimension(700, 700);
         this.dimButton = new Dimension(350,700);
         this.dimTxf = new Dimension(70, 50);
         this.initGIU();
         this.setSize(dimFrame);
+        /**
+         * Stiff characters
+         */
+        this.boss = new Boss();
         
         
     }
@@ -84,17 +88,30 @@ public class MainGUI extends JFrame{
         this.jtp.addTab("Play Game", pPlayGame);
         /**
          * Play game - output file
-         * logfile
+         * Attack butotn
          */
-        this.txaConsole = new JTextArea((int)dimButton.getWidth(), (int)dimButton.getHeight());
+        this.txaConsole = new JTextArea((int)dimButton.getWidth(), 300);
         
+        this.btnAttack = new JButton("Attack");
+        this.btnAttack.addActionListener( new ActionListener() {
+           @Override
+           public void actionPerformed( ActionEvent e){
+      
+           }
+        });
+        this.pPlayGame.setLayout(null);
         this.pPlayGame.add(txaConsole);
+        this.txaConsole.setBounds(0, 0, 700, 500);
+        this.pPlayGame.add(btnAttack);
+        this.btnAttack.setBounds(0,500, (int)dimButton.getWidth()*2, 120);
+
         /**
          * Character - functions
          * buttons
          */
         this.btnElf = new JButton("Elf");
         this.btnElf.addActionListener( new ActionListener(){
+            boolean elf = true;
             @Override
             public void actionPerformed( ActionEvent e ){
                 pCreateCharacter.remove(btnElf);
@@ -104,7 +121,7 @@ public class MainGUI extends JFrame{
             }
         });               
         this.btnHuman = new JButton("Human");
-        this.btnHuman.addActionListener( new ActionListener(){
+        this.btnHuman.addActionListener( new ActionListener(){           
             @Override
             public void actionPerformed( ActionEvent e ){
                 pCreateCharacter.remove(btnElf);
@@ -116,14 +133,17 @@ public class MainGUI extends JFrame{
         this.btnWarrior = new JButton("Warrior");
         this.btnWarrior.addActionListener( new ActionListener(){
             @Override
-            public void actionPerformed( ActionEvent e ){          
+            public void actionPerformed( ActionEvent e ){ 
+                
             }
         });
         this.btnArcher = new JButton("Archer");           
         this.btnArcher.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){
+                
             }
+            
         });
         this.lblCreateCharacter = new JLabel("Create Character");
         
