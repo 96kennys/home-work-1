@@ -28,7 +28,7 @@ public class MainGUI extends JFrame{
     private JPanel pCreateCharacter, pPlayGame;
     private JTabbedPane jtp;
     private Boss boss;
-    private Abstractclass player;
+    private Player player;
    
     /**
      * Modellvariabler
@@ -111,13 +111,13 @@ public class MainGUI extends JFrame{
          */
         this.btnElf = new JButton("Elf");
         this.btnElf.addActionListener( new ActionListener(){
-            boolean elf = true;
             @Override
             public void actionPerformed( ActionEvent e ){
                 pCreateCharacter.remove(btnElf);
                 pCreateCharacter.remove(btnHuman);
                 pCreateCharacter.add(btnWarrior);
                 pCreateCharacter.add(btnArcher);
+                player = new Elf();
             }
         });               
         this.btnHuman = new JButton("Human");
@@ -128,20 +128,47 @@ public class MainGUI extends JFrame{
                 pCreateCharacter.remove(btnHuman);
                 pCreateCharacter.add(btnWarrior);
                 pCreateCharacter.add(btnArcher);
+                player = new Human();
             }
         });
+        /*
+        Setting specific class attributes
+        */
         this.btnWarrior = new JButton("Warrior");
         this.btnWarrior.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){ 
                 
+                if(player.getRace().equals("Human")){
+                    
+                    player.setClass(2);
+                    
+                }
+                if(player.getRace().equals("Elf")){
+                    
+                    player.setClass(1);
+                    
+                }             
             }
         });
+        /*
+        Setting specific class attributes
+        */
         this.btnArcher = new JButton("Archer");           
         this.btnArcher.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){
                 
+                if(player.getRace().equals("Human")){
+                    
+                    player.setClass(1);
+                    
+                }
+                if(player.getRace().equals("Elf")){
+                    
+                    player.setClass(2);                   
+
+                }   
             }
             
         });

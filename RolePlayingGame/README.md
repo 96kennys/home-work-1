@@ -67,3 +67,9 @@ metod som ärver från playern, jag skapade en player som är en elf/human, och 
 /human ärver i sin tur från abstractklasssen. Jag har då problem med att det inte
 går att ärva från player. Sen har jag haft problem med att veta vilken ras jag har
 valt så nästa lektion är det problemen som jag ska åtgärda.
+
+-2014-11-12 Idag har jag fått hjälp med att efter jag klickat på knapparna 
+deklarera playern vilken ras och klass han har. Så jag fixade problemet från tidigare
+lektion. Nästa lektion ska jag påbörja "kriget" mellan playern och bossen samt 
+få textfältet att skicka ut information om "kriget". Sen ska jag få attack-knappen
+att ärva playerns attack.

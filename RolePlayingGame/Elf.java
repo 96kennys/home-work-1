@@ -1,20 +1,31 @@
 package RolePlayingGame;
 
-public class  Elf extends Abstractclass{
+public class Elf extends Player{
     
     public Elf(){
   
  }  
-    public int elfArcher(int x){
-        
-        int strength = attack(x);  
-        
-        return strength;
+    @Override
+    public void setClass(int pClass){
+        /*
+        One is allways the number one, the strongest one
+        */
+        if(pClass == 1){
+            
+            this.attack = 2;
+            this.health = 6;
+            
+        }
+        if(pClass == 2){
+            
+            this.attack = 1;
+            this.attack = 12;
+        }
     }
-    public int elfWarrior(int x){
+    @Override
+    public String getRace(){
         
-        int strength = attack(x);
+        return "Elf";
         
-        return strength;
-    }
+    } 
 }

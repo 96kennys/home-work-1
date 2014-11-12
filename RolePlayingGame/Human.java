@@ -1,21 +1,35 @@
 package RolePlayingGame;
 
-public class  Human extends Abstractclass{
+public class  Human extends Player{
     
     public Human(){
         
     }
-    public int humanArcher(int x){
+    
+    @Override
+    public void setClass(int pClass){
+        /*
+        One is allways the number one, the strongest one
+        */
+        if(pClass == 1){
+            
+            this.attack = 2;
+            this.health = 6;
+            
+        }
+        if(pClass == 2){
+            
+            this.attack = 1;
+            this.health = 12;
+            
+        }
         
-        int strength = attack(x);  
-        
-        return strength;
     }
-    public int humanWarrior(int x){
+    @Override
+    public String getRace(){
         
-        int strength = attack(x);
+        return "Human";
         
-        return strength;
-    }
+    } 
 
 }
