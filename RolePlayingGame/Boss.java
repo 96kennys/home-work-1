@@ -5,10 +5,10 @@ package RolePlayingGame;
  *
  * @author 96kennys
  */
-public class Boss {
+public abstract class Boss {
     
-    private final int attack = 3;
-    private final int health = 6;
+    int attack = 3;
+    int health = 10;
     
     public Boss(){
         
@@ -25,4 +25,7 @@ public class Boss {
         return attack;
         
     }
+    public abstract void setAttack(int attack);
+    //added
+    public abstract void setHealth(int health);
 }

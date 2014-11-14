@@ -22,6 +22,17 @@ public class Elf extends Player{
             this.attack = 12;
         }
     }
+    //added
+    @Override
+    public void setHealth(int health){
+        this.health = health;
+    }
+    //added
+    
+    @Override
+    public void setAttack(int attack){
+        this.attack = attack;
+    }
     @Override
     public String getRace(){
         

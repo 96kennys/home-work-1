@@ -77,3 +77,10 @@ att ärva playerns attack.
 -2014-11-14 Idag har jag lagt till klasser i modellen osm håller reda på allt som händer
 och som skall implementeras i GUI:et, jag har lagt itll en "combat" klass. Det
 jag har kvar är att skapa en vinnare innan dess att spelet fungerar komplett.
+
+-2014-11-14 Senare idag märkte jag att min "combat" metod inte fungerade men
+jag löste det genom att skapa nya abstrakta klasser där jag kunde sätta livet
+så att ifall jag hade blivit attackerad kunde jag säga att det var det nya livet.
+Det jag har kvar att göra innan programmet blir godkänd är CompareTo klassen,men
+jag funderar på att lägga till ett grafiskt fönster som ritar ut händelserna. Under
+helgen ska jag finjustera programmet kanske lägga till namn till karaktären osv.

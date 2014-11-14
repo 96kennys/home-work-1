@@ -60,6 +60,7 @@ public class MainGUI extends JFrame{
         /*
          * Skapar menyerna
          */
+        model = new Modelclass();
         
         this.menu = new JMenuBar();
         this.archive = new JMenu("Arkiv");
@@ -91,14 +92,15 @@ public class MainGUI extends JFrame{
          * Attack butotn
          */
         this.txaConsole = new JTextArea((int)dimButton.getWidth(), 300);
+        txaConsole.append("*******Welcome to the Game*******" + "\n");
         
         this.btnAttack = new JButton("Attack");
         this.btnAttack.addActionListener( new ActionListener() {
            @Override
            public void actionPerformed( ActionEvent e){
-      
-               model.combat();
-               txaConsole.append(null);
+               
+               String a = String.valueOf(model.combat() + "\n");
+               txaConsole.append(a);
                
            }
         });

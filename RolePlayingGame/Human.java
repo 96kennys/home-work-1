@@ -25,6 +25,17 @@ public class  Human extends Player{
         }
         
     }
+    //added
+    @Override
+    public void setHealth(int health){
+        this.health = health;
+    }
+    //added
+    
+    @Override
+    public void setAttack(int attack){
+        this.attack = attack;
+    }
     @Override
     public String getRace(){
         

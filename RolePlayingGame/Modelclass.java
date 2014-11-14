@@ -10,21 +10,47 @@ public class  Modelclass{
     
     public Modelclass(){
         
-        this.b = new Boss();
+        this.b = new Boss() {
+
+            @Override
+            public void setAttack(int attack) {
+                this.attack = attack;
+            }
+
+            @Override
+            public void setHealth(int health) {
+                this.health = health;
+            }
+        };
         
     }
     public String combat(){
         
-        pResult = p.getHealth();
-        bResult = b.getHealth();
+        pResult = p.getHealth() - b.getAttack();
+        bResult = b.getHealth() - p.getAttack();
         
-        while(pResult > 0 && bResult > 0){          
+        if(p.getHealth() > 0 && b.getHealth() > 0){          
             
-            pResult -= b.getAttack();
-            bResult -= p.getAttack();
+            //pResult -= b.getAttack();
+            //bResult -= p.getAttack();
+            p.setHealth(pResult);
+            b.setHealth(bResult);
             
+        
+        return String.valueOf("Your opponents hp: " + bResult + "\n"
+        + "Your hp: " + pResult);
+        
         }
-        return "winner";
+        if(b.getHealth() <= 0){
+            return "*******The Boss Died*******";
+        }
+            
+        else if(p.getHealth() <= 0){
+            return "*******You Died*******";
+        }
+            
+        return "a";
+  
     }
         
     public void addPlayer(Player p){
