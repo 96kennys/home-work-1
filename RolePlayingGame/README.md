@@ -73,3 +73,7 @@ deklarera playern vilken ras och klass han har. Så jag fixade problemet från t
 lektion. Nästa lektion ska jag påbörja "kriget" mellan playern och bossen samt 
 få textfältet att skicka ut information om "kriget". Sen ska jag få attack-knappen
 att ärva playerns attack.
+
+-2014-11-14 Idag har jag lagt till klasser i modellen osm håller reda på allt som händer
+och som skall implementeras i GUI:et, jag har lagt itll en "combat" klass. Det
+jag har kvar är att skapa en vinnare innan dess att spelet fungerar komplett.

@@ -27,8 +27,9 @@ public class MainGUI extends JFrame{
     private JTextArea txaName, txaConsole;
     private JPanel pCreateCharacter, pPlayGame;
     private JTabbedPane jtp;
-    private Boss boss;
-    private Player player;
+    
+    private Modelclass model;
+
    
     /**
      * Modellvariabler
@@ -46,7 +47,6 @@ public class MainGUI extends JFrame{
         /**
          * Stiff characters
          */
-        this.boss = new Boss();
         
         
     }
@@ -97,6 +97,9 @@ public class MainGUI extends JFrame{
            @Override
            public void actionPerformed( ActionEvent e){
       
+               model.combat();
+               txaConsole.append(null);
+               
            }
         });
         this.pPlayGame.setLayout(null);
@@ -117,7 +120,7 @@ public class MainGUI extends JFrame{
                 pCreateCharacter.remove(btnHuman);
                 pCreateCharacter.add(btnWarrior);
                 pCreateCharacter.add(btnArcher);
-                player = new Elf();
+                model.addPlayer(new Elf());
             }
         });               
         this.btnHuman = new JButton("Human");
@@ -128,27 +131,20 @@ public class MainGUI extends JFrame{
                 pCreateCharacter.remove(btnHuman);
                 pCreateCharacter.add(btnWarrior);
                 pCreateCharacter.add(btnArcher);
-                player = new Human();
+                model.addPlayer(new Human());
             }
         });
         /*
         Setting specific class attributes
         */
+        
         this.btnWarrior = new JButton("Warrior");
         this.btnWarrior.addActionListener( new ActionListener(){
             @Override
             public void actionPerformed( ActionEvent e ){ 
                 
-                if(player.getRace().equals("Human")){
-                    
-                    player.setClass(2);
-                    
-                }
-                if(player.getRace().equals("Elf")){
-                    
-                    player.setClass(1);
-                    
-                }             
+                model.setClass(1);
+                
             }
         });
         /*
@@ -159,16 +155,7 @@ public class MainGUI extends JFrame{
             @Override
             public void actionPerformed( ActionEvent e ){
                 
-                if(player.getRace().equals("Human")){
-                    
-                    player.setClass(1);
-                    
-                }
-                if(player.getRace().equals("Elf")){
-                    
-                    player.setClass(2);                   
-
-                }   
+                model.setClass(2);
             }
             
         });

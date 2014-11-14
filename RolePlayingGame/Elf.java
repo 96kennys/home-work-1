@@ -10,13 +10,13 @@ public class Elf extends Player{
         /*
         One is allways the number one, the strongest one
         */
-        if(pClass == 1){
+        if(pClass == 2){
             
             this.attack = 2;
             this.health = 6;
             
         }
-        if(pClass == 2){
+        if(pClass == 1){
             
             this.attack = 1;
             this.attack = 12;

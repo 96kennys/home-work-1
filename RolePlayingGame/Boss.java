@@ -5,25 +5,24 @@ package RolePlayingGame;
  *
  * @author 96kennys
  */
-public class Boss extends Player{
+public class Boss {
+    
+    private final int attack = 3;
+    private final int health = 6;
     
     public Boss(){
         
     }
     
-    @Override
-    public void setClass(int pClass){
+    public int getHealth(){
         
-        if(pClass == 3){
-            
-            this.attack = 3;           
-            this.health = 6;
+        return health;
+        
     }
-  }
-    @Override
-    public String getRace(){
+    
+    public int getAttack(){
         
-        return "Boss";
+        return attack;
         
-    } 
+    }
 }
