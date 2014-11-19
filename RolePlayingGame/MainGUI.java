@@ -92,6 +92,7 @@ public class MainGUI extends JFrame{
          * Attack butotn
          */
         this.txaConsole = new JTextArea((int)dimButton.getWidth(), 300);
+        this.txaConsole.setEditable(false);
         txaConsole.append("*******Welcome to the Game*******" + "\n");
         
         this.btnAttack = new JButton("Attack");
@@ -99,9 +100,12 @@ public class MainGUI extends JFrame{
            @Override
            public void actionPerformed( ActionEvent e){
                
-               String a = String.valueOf(model.combat() + "\n");
-               txaConsole.append(a);
-               
+                String cmbt = String.valueOf(model.combat() + "\n");
+
+                txaConsole.append(cmbt);
+                
+                btnAttack.setEnabled(false);
+
            }
         });
         this.pPlayGame.setLayout(null);

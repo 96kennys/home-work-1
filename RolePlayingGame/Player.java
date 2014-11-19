@@ -10,9 +10,12 @@ public abstract class  Player {
     public Player(){
     
     }
-
+    /**
+     * Sets the class strong or weak
+     * @param pClass can be declared 1(strong) or 2(weak)
+     */
     public abstract void setClass(int pClass);
-    //added
+    
     public abstract void setAttack(int attack);
     //added
     public abstract void setHealth(int health);

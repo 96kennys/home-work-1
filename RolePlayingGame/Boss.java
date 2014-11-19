@@ -5,7 +5,7 @@ package RolePlayingGame;
  *
  * @author 96kennys
  */
-public abstract class Boss {
+public class Boss extends Player {
     
     int attack = 3;
     int health = 10;
@@ -25,7 +25,23 @@ public abstract class Boss {
         return attack;
         
     }
-    public abstract void setAttack(int attack);
-    //added
-    public abstract void setHealth(int health);
+    @Override
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    @Override
+    public void setHealth(int health) {
+        this.health = health;
+   }
+
+    @Override
+    public void setClass(int pClass) {
+        
+    }
+
+    @Override
+    public String getRace() {
+        return "";
+    }
 }

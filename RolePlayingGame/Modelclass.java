@@ -1,6 +1,6 @@
 package RolePlayingGame;
 
-public class  Modelclass{
+public class  Modelclass {
 
 //Public metod skickar härifrån till GUI:et
 //"Allting händer här"
@@ -10,18 +10,7 @@ public class  Modelclass{
     
     public Modelclass(){
         
-        this.b = new Boss() {
-
-            @Override
-            public void setAttack(int attack) {
-                this.attack = attack;
-            }
-
-            @Override
-            public void setHealth(int health) {
-                this.health = health;
-            }
-        };
+        this.b = new Boss();
         
     }
     public String combat(){
@@ -31,21 +20,19 @@ public class  Modelclass{
         
         if(p.getHealth() > 0 && b.getHealth() > 0){          
             
-            //pResult -= b.getAttack();
-            //bResult -= p.getAttack();
             p.setHealth(pResult);
-            b.setHealth(bResult);
-            
+            b.setHealth(bResult);            
         
         return String.valueOf("Your opponents hp: " + bResult + "\n"
         + "Your hp: " + pResult);
         
         }
-        if(b.getHealth() <= 0){
+ 
+        if( b.getHealth() == 0 ){
             return "*******The Boss Died*******";
         }
             
-        else if(p.getHealth() <= 0){
+        else if( p.getHealth() == 0){
             return "*******You Died*******";
         }
             
