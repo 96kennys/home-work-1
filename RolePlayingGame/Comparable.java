@@ -1,5 +1,5 @@
 /**
- * @author Kent Nystedt
+ * @author © Kent Nystedt Björknäsgymansiet TE12
  */
 package RolePlayingGame;
 /*By implementing the interface I make the class more formal about the behaviour

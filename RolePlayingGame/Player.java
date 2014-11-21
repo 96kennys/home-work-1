@@ -1,3 +1,6 @@
+/**
+ * @author © Kent Nystedt Björknäsgymansiet TE12
+ */
 package RolePlayingGame;
 
 //Implements comparable => implementing a interface.

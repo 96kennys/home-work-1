@@ -1,5 +1,5 @@
 /**
- * @author Kent Nystedt
+ * @author © Kent Nystedt Björknäsgymansiet TE12
  */
 package RolePlayingGame;
 //Importing the necessary components to be used in the GUI.

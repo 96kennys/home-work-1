@@ -1,5 +1,5 @@
 /**
- * @author Kent Nystedt
+ * @author © Kent Nystedt Björknäsgymansiet TE12
  */
 package RolePlayingGame;
 

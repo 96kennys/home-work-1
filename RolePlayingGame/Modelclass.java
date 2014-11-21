@@ -1,9 +1,10 @@
+/**
+ * @author © Kent Nystedt Björknäsgymansiet TE12
+ */
 package RolePlayingGame;
 
 public class  Modelclass {
-/**
- * @author Kent Nystedt
- */
+
   //Components that interacts off-screen that're displayed in the console(txaConsole).
     private int pResult, bResult, i;
     private Player p;
