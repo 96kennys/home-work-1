@@ -85,5 +85,14 @@ Det jag har kvar att göra innan programmet blir godkänd är CompareTo klassen,
 jag funderar på att lägga till ett grafiskt fönster som ritar ut händelserna. Under
 helgen ska jag finjustera programmet kanske lägga till namn till karaktären osv.
 
--2014-11-21 Det jag hade glömt sen tidigare var att skapa en comparable, så jag tog
-mig tid att skapa de via 
+-2014-11-19 Jag hade en ogodtagbar lösning till min lösning på combat-problemet,
+men det löste sig då jag implementera attacken och livet i bossen och inte i modell
+klassen. Det jag hade glömt sen tidigare var att skapa en comparable, så jag tog
+mig tid att skapa den men har ingen aning ännu hur den används eller var den ska
+implementeras.
+
+-2014-11-21 Jag listade ut hur comparable ska användas men använder endast
+ den komplett i boss-klassen där jag jämför vem som lever eller dog.
+ Den implementeras i boss-klassen. Inlämningen är den 21:a, så nu har jag
+ en deadline att hålla. Det jag måste fixa nu är ett klassdiagram och kommentera
+koden.

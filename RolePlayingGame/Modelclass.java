@@ -48,9 +48,10 @@ public class  Modelclass {
         
             this.i += 1;        
             
-            return String.valueOf("Your opponents total hp: " + b.getHealth() + " || "
-        + "Your opponents total attack: " + b.getAttack() + "\n"
-        + "Your total hp: " + p.getHealth() + " || " + "Your total attack: " + p.getAttack());
+            return String.valueOf("The boss's starting hp: " + b.getHealth() 
+                    + " || " + "The boss's attack: " + b.getAttack()
+                    + "\t\t\t" + "Your starting hp: " + p.getHealth() + " || " 
+                    + "Your total attack: " + p.getAttack() );
             
         }
         
@@ -62,17 +63,18 @@ public class  Modelclass {
             p.setHealth(pResult);
             b.setHealth(bResult);            
         
-        return String.valueOf("The boss's hp: " + bResult + "|| From your: " + p.getAttack() + " damage attack. \n"
-        + "Your hp: " + pResult + "|| From the boss's: " + p.getAttack() + " damage attack.");
+        return String.valueOf("The boss's hp: " + bResult + " || From your: "
+                + p.getAttack() + " [dmg] attack. \t\t\t" + "Your hp: " + pResult 
+                + " || From boss's: " + p.getAttack() + " [dmg] attack.");
         
         }
  
         if( b.compareTo(p) == 1 ){
-            return "*******The Boss Died*******";
+            return "\t\t\t*******The Boss Died*******" + "\n \t\t\t *******YOU WON******";
         }
             
         else if( b.compareTo(p) == 0 ){
-            return "*******You Died*******";
+            return "\t\t\t*******You Died*******" + "\n \t\t\t ******YOU LOST******";
         }
         
         return "You didn't select a class";
