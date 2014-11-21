@@ -47,7 +47,7 @@ public class Boss extends Player{
 
     @Override
     public String getRace() {
-        return "";
+        return "Boss";
     }
 
    @Override

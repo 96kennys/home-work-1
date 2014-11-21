@@ -48,6 +48,11 @@ public class  Modelclass {
         
             this.i += 1;        
             
+            if(p.getAttack() == 0){
+                
+                return "\t\t\t***You didn't select a class!***";
+            }
+            
             return String.valueOf("The boss's starting hp: " + b.getHealth() 
                     + " || " + "The boss's attack: " + b.getAttack()
                     + "\t\t\t" + "Your starting hp: " + p.getHealth() + " || " 
@@ -65,7 +70,7 @@ public class  Modelclass {
         
         return String.valueOf("The boss's hp: " + bResult + " || From your: "
                 + p.getAttack() + " [dmg] attack. \t\t\t" + "Your hp: " + pResult 
-                + " || From boss's: " + p.getAttack() + " [dmg] attack.");
+                + " || From boss's: " + b.getAttack() + " [dmg] attack.");
         
         }
  
@@ -77,7 +82,7 @@ public class  Modelclass {
             return "\t\t\t*******You Died*******" + "\n \t\t\t ******YOU LOST******";
         }
         
-        return "You didn't select a class";
+        return "ERROR 404";
   
     }
     

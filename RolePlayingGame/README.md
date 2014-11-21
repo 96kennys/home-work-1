@@ -24,9 +24,11 @@ Arbetsgång:
 
 Inledning
 ---
-
 Presentation av projektet/programmet
-
+Detta program är ett projektarbete i programmering 2 som är skapat utav mig, Kent Nystedt.
+Där jag fick i uppgift att skapa ett simpelt rollspel. Programmer är ett rollspel 
+där man kan skapa en namnlös karaktär som sedan slåss mot en boss med random liv 
+och attack.
 
 Genomförande
 ---
