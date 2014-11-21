@@ -1,22 +1,7 @@
 package RolePlayingGame;
 
-public class Comparable{
+public interface Comparable{
     
-    protected int health;
-    
-    
-    public Comparable(){
-        
-    }
-    
-    public Comparable(int health){
-     
-        this.health = health;
-    
-    }
-    @Override
-    public int compareTo(){
-        
-    }
-    
+    public abstract int compareTo(Player p);
+
 }

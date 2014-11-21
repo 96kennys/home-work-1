@@ -104,7 +104,7 @@ public class MainGUI extends JFrame{
 
                 txaConsole.append(cmbt);
                 
-                btnAttack.setEnabled(false);
+                //btnAttack.setEnabled(false);
 
            }
         });

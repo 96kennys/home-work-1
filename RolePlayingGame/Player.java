@@ -1,6 +1,6 @@
 package RolePlayingGame;
 
-public abstract class  Player {
+public abstract class  Player implements Comparable{
     
     protected int race;
     protected int pClass;
