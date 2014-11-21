@@ -26,22 +26,46 @@ Inledning
 ---
 Presentation av projektet/programmet
 Detta program är ett projektarbete i programmering 2 som är skapat utav mig, Kent Nystedt.
-Där jag fick i uppgift att skapa ett simpelt rollspel. Programmer är ett rollspel 
-där man kan skapa en namnlös karaktär som sedan slåss mot en boss med random liv 
-och attack.
+Där jag fick i uppgift att skapa ett simpelt rollspel. I rollspelet kanman skapa
+ en namnlös karaktär som sedan slåss mot en boss med random liv och attack. 
+Det finns två flikar en där man väljer rasen och sedan väljer klassen.
+Där klassen är beroende av vilken ras man väljer. I den andra finns en konsoll i 
+form av en textarea, som skriver ut vad som inträffar i spelet när man klickar på
+en attack knapp.
 
 Genomförande
 ---
-
+-I början av utvecklingen gick allting smort när man skulle lägga in komponenter i
+MainGUI:et, jag lärde mig väldigt mycket nytt som jag tidigare inte hade kommit
+i kontakt med. Det största var nog alla de olika komponenterna som vi var tvugna
+att koda fram i jämförelse mot tidigare då vi endast kunde implementera de utan
+någon som helst kod överhuvudtaget med hjälp av en JFrame.
+-Däremot halvvägs igenom projektet inträffade en rad problem som jag
+var tvungen att lösa, bland annat visste jag inte vart allting skulle ske. Jag trodde
+att allting skulle köra i gränssnittsklassen. Men tack var min handledare instruktioner
+lyckades problem att lösa sig tillslut då han visade mig hur: abstrakta klasser, 
+ärvning från filer och initalisera klasser i andra filer fungerade. Tack vare detta
+kunde jag förflytta mig frammåt och lyckades konstruera mitt program så som jag ville
+att det skulle se ut.
+- Men då frammåt slutet av utevecklingstiden kom jag på någonting
+"Jag hade glömt Comparable", denna klass hade jag ingen som helst aning om hur den
+skulle användas och VARFÖR den skulle användas för organiser så jag var tillbaka 
+på ruta ett(kändes det som). Min handledare uppmanade mig till att organisera livet,
+vilket jag då tog och gjorde med instruktioner från honom, men av någon anledning
+fungerade det inte ännu. Men då gjorde jag om klassen och lyckades då till slut
+organisera livet.
 Hur gick det?
 
 
 Slutresultat/Analys/Diskussion
 ---
 
-- Buggar
-- Förbättringar
-- Övrigt
+- Buggar: Det finns en bugg som jag inte kan hantera. När jag inte valt någon klass
+men kör "Attack" skrivs det att jag inte valt någon kallt två gånger istället för 1.
+- Förbättringar: Jag skulle kunna vilja rita ut allting som skedde i konsollen, som
+exempelvis kunna rita ut attack animationer, bossen och spelaren.
+- Övrigt: Jag har lärt mig väldigt mycket från detta arbete mer än något annat
+programmeringsarbete, varför? För att nu gjorde jag ett program från grunden?
 
 rubrik
 ---
@@ -95,6 +119,7 @@ implementeras.
 
 -2014-11-21 Jag listade ut hur comparable ska användas men använder endast
  den komplett i boss-klassen där jag jämför vem som lever eller dog.
- Den implementeras i boss-klassen. Inlämningen är den 21:a, så nu har jag
+ Den implementeras i boss-klassen. Jag fixade så att ifall jag eller bossen dör
+kan programmer inte längre köras. Inlämningen är den 21:a, så nu har jag
  en deadline att hålla. Det jag måste fixa nu är ett klassdiagram och kommentera
 koden.
