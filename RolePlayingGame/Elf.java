@@ -41,28 +41,10 @@ public class Elf extends Player implements Comparable{
         return "Elf";
         
     } 
+    
     @Override
     public int compareTo(Player p){
-        
-        int playerHealth = this.getHealth();
-        int enemyHealth = p.getHealth();
-        
-        final int MORE = 1;
-        final int EQUAL = 0;        
-        final int LESS = -1;
-        
-        if(playerHealth < enemyHealth){
-            return LESS;
-        }
-        
-        if(playerHealth > enemyHealth){
-            return MORE;
-        }
-        
-        if(playerHealth == enemyHealth){
-            return EQUAL;
-        }
-        return 2;
+      return 0;
     }
 
 }

@@ -44,6 +44,7 @@ public class MainGUI extends JFrame{
         this.dimTxf = new Dimension(70, 50);
         this.initGIU();
         this.setSize(dimFrame);
+        this.setResizable(false);
         /**
          * Stiff characters
          */
@@ -104,7 +105,7 @@ public class MainGUI extends JFrame{
 
                 txaConsole.append(cmbt);
                 
-                //btnAttack.setEnabled(false);
+                
 
            }
         });

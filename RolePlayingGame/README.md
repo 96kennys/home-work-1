@@ -84,3 +84,6 @@ så att ifall jag hade blivit attackerad kunde jag säga att det var det nya liv
 Det jag har kvar att göra innan programmet blir godkänd är CompareTo klassen,men
 jag funderar på att lägga till ett grafiskt fönster som ritar ut händelserna. Under
 helgen ska jag finjustera programmet kanske lägga till namn till karaktären osv.
+
+-2014-11-21 Det jag hade glömt sen tidigare var att skapa en comparable, så jag tog
+mig tid att skapa de via 

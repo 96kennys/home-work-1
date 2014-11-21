@@ -1,14 +1,18 @@
 
 package RolePlayingGame;
 
+import java.util.Random;
+
 /**
  *
  * @author 96kennys
  */
 public class Boss extends Player{
     
-    protected int attack = 3;
-    protected int health = 10;
+    Random rdm = new Random();
+    
+    protected int attack = rdm.nextInt(10) + 1;
+    protected int health = rdm.nextInt(10) + 1;
     
     
     public Boss(){
@@ -46,29 +50,25 @@ public class Boss extends Player{
         return "";
     }
 
-    @Override
+   @Override
     public int compareTo(Player p){
         
-        int playerHealth = this.getHealth();
+        int bossHealth = this.getHealth();
         int enemyHealth = p.getHealth();
         
-        final int MORE = 1;
-        final int EQUAL = 0;        
-        final int LESS = -1;
+        final int WIN = 1;
+        final int LOSS = 0;               
+        final int BUG = -1;
         
-        if(playerHealth < enemyHealth){
-            return LESS;
+        if(bossHealth <= 0){
+            return WIN;
         }
         
-        if(playerHealth > enemyHealth){
-            return MORE;
+        if(enemyHealth <= 0){
+            return LOSS;
         }
         
-        if(playerHealth == enemyHealth){
-            return EQUAL;
-        }
-        return 2;
+        return  BUG;
+    
     }
-
-
 }

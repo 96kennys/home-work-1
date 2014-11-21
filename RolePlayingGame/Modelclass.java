@@ -4,15 +4,17 @@ public class  Modelclass {
 
 //Public metod skickar härifrån till GUI:et
 //"Allting händer här"
-    private int pResult, bResult;
+    private int pResult, bResult, i;
     private Player p;
     private Boss b;
     
     public Modelclass(){
         
         this.b = new Boss();
+        this.i = 1;
         
     }
+    /*
     public String combat(){
         
         pResult = p.getHealth() - b.getAttack();
@@ -35,11 +37,48 @@ public class  Modelclass {
         else if( p.getHealth() == 0){
             return "*******You Died*******";
         }
-            
+        
         return "a";
   
-    }
+    }*/
+    
+    public String combat(){        
         
+        if(this.i == 1){
+        
+            this.i += 1;        
+            
+            return String.valueOf("Your opponents total hp: " + b.getHealth() + " || "
+        + "Your opponents total attack: " + b.getAttack() + "\n"
+        + "Your total hp: " + p.getHealth() + " || " + "Your total attack: " + p.getAttack());
+            
+        }
+        
+        pResult = p.getHealth() - b.getAttack();
+        bResult = b.getHealth() - p.getAttack();
+                
+        if(p.getHealth() > 0 && b.getHealth() > 0){          
+            
+            p.setHealth(pResult);
+            b.setHealth(bResult);            
+        
+        return String.valueOf("The boss's hp: " + bResult + "|| From your: " + p.getAttack() + " damage attack. \n"
+        + "Your hp: " + pResult + "|| From the boss's: " + p.getAttack() + " damage attack.");
+        
+        }
+ 
+        if( b.compareTo(p) == 1 ){
+            return "*******The Boss Died*******";
+        }
+            
+        else if( b.compareTo(p) == 0 ){
+            return "*******You Died*******";
+        }
+        
+        return "You didn't select a class";
+  
+    }
+    
     public void addPlayer(Player p){
         
         this.p = p;
